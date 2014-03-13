@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_GENERICS;ENABLE_SUBSTANCE;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;UNITY_4_3_4;UNITY_4_3;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,6 +46,74 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Astar\Core\AI\AIPath.cs" />
+     <Compile Include="Assets\Astar\Core\AI\NavmeshController.cs" />
+     <Compile Include="Assets\Astar\Core\AI\Seeker.cs" />
+     <Compile Include="Assets\Astar\Core\AstarData.cs" />
+     <Compile Include="Assets\Astar\Core\AstarMath.cs" />
+     <Compile Include="Assets\Astar\Core\AstarPath.cs" />
+     <Compile Include="Assets\Astar\Core\GraphUpdateScene.cs" />
+     <Compile Include="Assets\Astar\Core\GraphUpdateShape.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\AnimationLink.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\AstarDebugger.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\BinaryHeap.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\GraphEditorBase.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\GraphModifier.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\Int3.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\ListPool.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\NodeLink.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\NodeLink2.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\NodeLink3.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\ObjectPool.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\PathPool.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\StackPool.cs" />
+     <Compile Include="Assets\Astar\Core\Misc\ThreadControlQueue.cs" />
+     <Compile Include="Assets\Astar\Core\Nodes\GraphNode.cs" />
+     <Compile Include="Assets\Astar\Core\Path.cs" />
+     <Compile Include="Assets\Astar\Core\PathHandler.cs" />
+     <Compile Include="Assets\Astar\Core\Serialization\JsonConverters.cs" />
+     <Compile Include="Assets\Astar\Core\Serialization\JsonSerializer.cs" />
+     <Compile Include="Assets\Astar\Core\astarclasses.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\Example12_Procedural\ProceduralGridMover.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\Example12_Procedural\ProceduralWorld.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\ExampleScripts\AIFollow.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\ExampleScripts\AstarSmoothFollow2.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\ExampleScripts\DoorController.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\ExampleScripts\DynamicGridObstacle.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\ExampleScripts\MineBotAI.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\ExampleScripts\ObjectPlacer.cs" />
+     <Compile Include="Assets\Astar\ExampleScenes\ExampleScripts\TargetMover.cs" />
+     <Compile Include="Assets\Astar\Generators\Base.cs" />
+     <Compile Include="Assets\Astar\Generators\GridGenerator.cs" />
+     <Compile Include="Assets\Astar\Generators\NavMeshGenerator.cs" />
+     <Compile Include="Assets\Astar\Generators\NodeClasses\GridNode.cs" />
+     <Compile Include="Assets\Astar\Generators\NodeClasses\PointNode.cs" />
+     <Compile Include="Assets\Astar\Generators\NodeClasses\TriangleMeshNode.cs" />
+     <Compile Include="Assets\Astar\Generators\PointGenerator.cs" />
+     <Compile Include="Assets\Astar\Generators\QuadtreeGraph.cs" />
+     <Compile Include="Assets\Astar\Generators\Utilities\BBTree.cs" />
+     <Compile Include="Assets\Astar\Generators\Utilities\NavMeshRenderer.cs" />
+     <Compile Include="Assets\Astar\Generators\Utilities\ObjImporter.cs" />
+     <Compile Include="Assets\Astar\Modifiers\AlternativePath.cs" />
+     <Compile Include="Assets\Astar\Modifiers\FunnelModifier.cs" />
+     <Compile Include="Assets\Astar\Modifiers\Modifiers.cs" />
+     <Compile Include="Assets\Astar\Modifiers\RaycastModifier.cs" />
+     <Compile Include="Assets\Astar\Modifiers\SimpleSmoothModifier.cs" />
+     <Compile Include="Assets\Astar\Modifiers\StartEndModifier.cs" />
+     <Compile Include="Assets\Astar\Navmesh\RelevantGraphSurface.cs" />
+     <Compile Include="Assets\Astar\Pathfinders\ABPath.cs" />
+     <Compile Include="Assets\Astar\Utilities\AstarChecksum.cs" />
+     <Compile Include="Assets\Astar\Utilities\AstarMemory.cs" />
+     <Compile Include="Assets\Astar\Utilities\AstarParallel.cs" />
+     <Compile Include="Assets\Astar\Utilities\AstarProfiler.cs" />
+     <Compile Include="Assets\Astar\Utilities\DotNetReplacements.cs" />
+     <Compile Include="Assets\Astar\Utilities\GraphUpdateUtilities.cs" />
+     <Compile Include="Assets\Astar\Utilities\LockFreeStack.cs" />
+     <Compile Include="Assets\Astar\Utilities\PathUtilities.cs" />
+     <Compile Include="Assets\Astar\Utilities\ProfileHelper.cs" />
+     <Compile Include="Assets\Astar\Utilities\SizeProfiler.cs" />
+     <Compile Include="Assets\Astar\Utilities\UnityReferenceHelper.cs" />
+     <Compile Include="Assets\Astar\changelog.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -204,6 +272,7 @@
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Astar\Editor\EditorAssets\Materials\Navmesh2.shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc\Orc Skin.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
@@ -218,12 +287,14 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\Astar\Plugins\DotNetZip\License.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (AlphaClip) .shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+     <None Include="Assets\Astar\ExampleScenes\Materials\Projector Multiply.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\RadialBlur.shader" />
@@ -239,8 +310,11 @@
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (AlphaClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (AlphaClip).shader" />
+     <None Include="Assets\Astar\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
+     <None Include="Assets\Astar\Plugins\dependencies.txt" />
+     <None Include="Assets\Astar\ExampleScenes\_Example Scenes.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Dynamic Font (SoftClip).shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MobileBlur.shader" />
@@ -252,6 +326,7 @@
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed) (SoftClip).shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored (SoftClip).shader" />
+     <None Include="Assets\Astar\Readme_upgrading.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
@@ -261,8 +336,10 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Astar\ExampleScenes\Materials\Projector Light.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CameraMotionBlurDX11.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Astar\Readme.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text.shader" />
      <None Include="Assets\Prefabs\Sugiyama\Shaders\Toon\Readme.txt" />
@@ -283,10 +360,12 @@
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Astar\Plugins\JsonFx\License.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Additive Colored.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Astar\Plugins\JsonFx\Readme.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrection3DLut.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
@@ -305,9 +384,16 @@
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\NGUI\Examples\Models\Orc Armor\Orc Armor.shader" />
      <None Include="Assets\NGUI\Examples\Resources\Localization.txt" />
+     <None Include="Assets\Astar\link.xml" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Prefabs\Top-Down city\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>Assets\Astar\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.JsonFx">
+ <HintPath>Assets\Astar\Plugins\JsonFx\Pathfinding.JsonFx.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
