@@ -63,6 +63,12 @@ public class AIFollow : MonoBehaviour {
 	public void Start () {
 		seeker = GetComponent<Seeker>();
 		controller = GetComponent<CharacterController>();
+		// change controller according to micro orc
+		controller.center = new Vector3(0,0.5f,0);
+		controller.radius = 0.5f;
+		controller.height = 0.5f;
+		target = GameObject.Find("Target").transform;
+
 		navmeshController = GetComponent<NavmeshController>();
 		
 		tr = transform;
