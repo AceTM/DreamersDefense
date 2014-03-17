@@ -61,11 +61,12 @@ public class AIFollow : MonoBehaviour {
 	
 	/** Use this for initialization */
 	public void Start () {
+		speed = 2;
 		seeker = GetComponent<Seeker>();
 		controller = GetComponent<CharacterController>();
 		// change controller according to micro orc
 		controller.center = new Vector3(0,0.5f,0);
-		controller.radius = 0.5f;
+		controller.radius = 0.4f;
 		controller.height = 0.5f;
 		target = GameObject.Find("Target").transform;
 
@@ -196,6 +197,9 @@ public class AIFollow : MonoBehaviour {
 	 */
 	public virtual void ReachedEndOfPath () {
 		//The AI has reached the end of the path
+		Destroy(this.gameObject);
+
+		//TODO decrease user's HP
 	}
 	
 	/** Update is called once per frame */
